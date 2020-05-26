@@ -1,8 +1,5 @@
 <template>
   <div id="navigation-mobile">
-    <!-- <div class="logo">
-        <img src="../assets/logo.png" alt="">
-    </div> -->
     <div class="search">
       <input type="text" placeholder="Search..." />
       <i class="fas fa-search"></i>
@@ -37,7 +34,7 @@ export default {};
 
     li {
       color: #fff;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bold;
       margin-bottom: 20px;
       cursor: pointer;
@@ -70,7 +67,7 @@ export default {};
       position: absolute;
       right: 5px;
       top: 10px;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       color: #aaa;
       cursor: pointer;
     }

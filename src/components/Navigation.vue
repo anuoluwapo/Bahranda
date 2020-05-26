@@ -25,8 +25,8 @@ export default {};
 #navigation {
   display: flex;
   width: 100%;
-  margin-bottom: 50px;
-
+  margin: 0 25px 0 -15px;
+  border-bottom: 2px solid black;
   ul {
     display: flex;
     list-style: none;

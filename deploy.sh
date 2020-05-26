@@ -16,3 +16,8 @@ git commit -m 'deploy'
 git push -f git@github.com:anuoluwapo/bahranda.git master:gh-pages
 
 cd -
+
+
+
+
+ 

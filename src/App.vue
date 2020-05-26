@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     handleView() {
-      this.mobileView = window.innerWidth <= 1050;
+      this.mobileView = window.innerWidth <= 1059;
     }
   },
   components: {
@@ -83,6 +83,7 @@ body {
 
   i {
     font-size: 1.5rem;
+    margin-top: -30px;
   }
 }
 
@@ -91,8 +92,7 @@ body {
   top: 0px;
   left: 0;
   width: 100%;
-  // width: calc(100% - 60px);
-  height: calc(100vh - 60px);
+  height: 100vh;
   padding: 20px;
   background-color: #fff;
 }
@@ -101,10 +101,14 @@ body {
   transform: translateX(300px);
 }
 .company-logo{
-    margin-top: -46px;
+  // background-color: blue;
+    margin-top: -35px;
     margin-left: 120px;
-    height: 120px !important;
-    width: 40px !important;
+    img{
+      width: 150px;
+      height: 30px;
+      margin-top: 5px;
+    }
 }
 
 </style>
