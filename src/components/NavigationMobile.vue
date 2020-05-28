@@ -26,7 +26,6 @@ export default {};
 <style lang="scss" scoped>
 #navigation-mobile {
   padding: 20px 0 0 0;
-
   ul {
     list-style: none;
     width: 200px;

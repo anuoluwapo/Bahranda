@@ -60,15 +60,16 @@ body {
   padding: 0;
   font-family: "Segoe UI", Tahoma;
   background-color: #7ca971;
+  overflow-x: hidden;
 }
 
 #app {
   position: relative;
   width: calc(100% - 20px);
-  height: calc(100vh - 20px);
+  height: 100vh;
+  // height: calc(100vh - 20px);
   padding: 10px;
   color: #333;
-  overflow: hidden;
 }
 
 .top-bar {
@@ -101,7 +102,6 @@ body {
   transform: translateX(300px);
 }
 .company-logo{
-  // background-color: blue;
     margin-top: -35px;
     margin-left: 120px;
     img{

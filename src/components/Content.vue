@@ -5,10 +5,63 @@
         <h2>THE WORLD’S BEST CROWD FUNDING PLATFORM</h2>
         <p>We connect investors to sustainable farm products with higher results</p>
       </div>
-        
-     
-      
     </div>
+    <div id="who-are-we">
+      <div class="intro">
+        <header>
+          <h1>Who are we</h1>
+        </header>
+        <p class="intro-txt">Bharanda is an agricultural commodity trading platform, that allows for participants and investors interested in Agribusiness but who do not have the time, expertise and full complement of resources, the opportunity to profit through the trading of Agricultural commodities in the local and International markets, and to be stakeholders in Agricultural commodity trading through a collaborative sponsorship effort.</p>
+        <p class="intro-txt">With Bharanda, you can work and earn big from agricultural commodities from the comfort of your home or technological device, without having to get your hands dirty.</p>
+      </div>
+      <div class="workers-img">
+        <div class="img-1">
+          <img src="../assets/image-20160706-12743-19qcicm.png" alt="workers image">
+        </div>
+        <div class="img-2">
+          <img src="../assets/263aeebdf5741489081171cf8cd20e6d (1).png" alt="workes image">
+        </div>
+      </div>
+    </div>
+
+      <div id="be-a-bahranda">
+      <div class="intro">
+        <header>
+          <h1>Be a Bahranda</h1>
+        </header>
+        <article>
+          <h3>How it works:</h3>
+          <p>Investor Creates an account and choose commodities to invest in.</p>
+        </article>
+        <article>
+          <h3>Who do the works:</h3>
+          <p>Our team of experts handle the purchasing, processing and trading in the local and International markets.</p>
+        </article>
+        <article>
+          <h3>Get regular updates:</h3>
+          <p>During the tenure of investment, the commodity investor receives a contract and Warehouse receipt as well as gets a periodic update In form of text, emails, pictures and videos. The updates will also be available on the profile of the investor on the platform.</p>
+        </article>
+        <article>
+          <h3>Earn your returns:</h3>
+          <p>At the completion of the trade cycle, your capital and returns on investment specific to the contracted trade is remitted to the electronic wallet on the platform and can be transferred to a bank account provided by investors or to sponsor another trade for a new trading season.</p>
+        </article>
+         <div class="read-more-btn">
+        <button>Read More About Us</button>
+      </div>
+      </div>
+     
+      <div class="workers-img">
+        <div class="img-1">
+          <img src="../assets/image-20160706-12743-19qcicm.png" alt="workers image">
+        </div>
+        <div class="img-2">
+          <img src="../assets/263aeebdf5741489081171cf8cd20e6d (1).png" alt="workes image">
+        </div>
+      </div>
+    </div>
+    <!-- <div id="our-statistics">
+      <h2>Our Statistics</h2>
+    </div> -->
   </div>
 </template>
 
@@ -57,7 +110,153 @@ export default {}
     }
     
   }
+
+  #who-are-we, #be-a-bahranda{
+    background-color: #ffffff;
+    // height: 80vh;
+    display: flex;
+    flex-shrink: 1;
+    margin-top: 10px;
+    margin-left: -4.8px;
+    margin-right: -4.5px;
+    .intro{
+      margin-left: 30px;
+      width: 50%;
+      header{
+      text-align: center;
+      h1{
+        font-size: 2rem;
+        color: #17D65E;
+        }
+      }
+      p.intro-txt{
+        padding: 2px 20px;
+        font-size: 1.2rem;
+        text-align: justify;
+        line-height: 1.5rem;
+      }
+    }
+    .workers-img{
+       width: 40%;
+       margin: 30px auto 0 auto;
+      div{
+        width: 20%;
+        height: 150px;
+        margin-left: 60px;
+      }
+      img{
+        max-width: 100%;
+      }
+      .img-1{
+        position: absolute;
+        z-index: 1;
+      }
+      .img-2{
+        position: absolute;
+        bottom: -290px;
+        left: 850px;
+      }
+    }
+  }
+  #be-a-bahranda{
+    margin-top: 0;
+    padding-top: 5rem;
+    .img-2{
+        position: absolute;
+        top: 1220px;
+      }
+      article{
+         padding: 0 20px;
+        h3{
+          font-weight: 905;
+        }
+        p{
+          font-size: 1.2rem;
+          text-align: justify;
+          line-height: 1.5rem;
+        }
+      }
+      .read-more-btn{
+        margin: 10px auto;
+        max-width: 300px;
+        button {
+          color: #ffffff;
+            font-size: 1rem;
+          background-color: #17D65E;
+          border: none;
+          border-radius: 2px;
+          outline: none;
+          min-height: 40px;
+          &:hover, :focus{
+            cursor: pointer;
+          
+          }
+        };
+        
+       
+      }
+  }
+  #our-statistics{
+    height: 100vh;
+    top: 0;
+    background-color: #ffffff;
+  }
  
 }
+
+@media(max-width:1170px){
+    #content{
+      #who-are-we, #be-a-bahranda{
+        
+         .intro{
+            width: 80%;
+         }
+         .workers-img{
+            width: 50%;
+            margin-top: 50px;
+            div{
+              width: 50%;
+          }
+           .img-1, .img-2{
+        position: relative;
+      }
+           .img-2{
+        top: 50px;
+        left: 0;
+      }
+        }
+      }
+    }
+ }
+ @media(max-width:800px){
+    #content{
+      #who-are-we, #be-a-bahranda{
+        flex-wrap: wrap;
+         .intro{
+            width: 100%;
+         }
+         .workers-img{
+            width: 100%;
+            margin-top: 0;
+            div{
+              width: 30%;
+              display: inline-block;
+          }
+           .img-1{
+        position: relative;
+      }
+           .img-2{
+        position: relative;
+        top: 0;
+      }
+        }
+      }
+      #be-a-bahranda{
+        .workers-img{
+          display: none;
+        }
+      }
+    }
+ }
  
 </style>
