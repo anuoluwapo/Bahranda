@@ -59,9 +59,32 @@
         </div>
       </div>
     </div>
-    <!-- <div id="our-statistics">
-      <h2>Our Statistics</h2>
-    </div> -->
+    <div id="our-statistics">
+      <div class="container">
+        <h2>Our Statistics</h2>
+      
+        <div class="cards">
+          <div class="card">
+          <i class="fas fa-users"></i>
+          <h1>16,000<span>+</span></h1>
+          <p>Investors</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-glass-whiskey"></i>
+          <h1>800<span>+</span></h1>
+          <p>Products</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-money-bill-wave"></i>
+          <h1>2,00,0000<span>+</span></h1>
+          <p>Investeds</p>
+        </div>
+        </div>
+        
+         
+        
+        </div>  
+    </div>
   </div>
 </template>
 
@@ -113,7 +136,6 @@ export default {}
 
   #who-are-we, #be-a-bahranda{
     background-color: #ffffff;
-    // height: 80vh;
     display: flex;
     flex-shrink: 1;
     margin-top: 10px;
@@ -197,9 +219,59 @@ export default {}
       }
   }
   #our-statistics{
-    height: 100vh;
-    top: 0;
+    margin-top: -13px;
+    margin-left: -4.8px;
+    margin-right: -4.5px;
+    padding: 30px;
     background-color: #ffffff;
+    .container{
+      // margin-top: -5px;
+      background-color: #F7F7F7;
+       box-shadow: 0px 2px 8px #00000022;
+       h2{
+         text-align: center;
+         font-size: 2rem;
+         font-weight: 500;
+         letter-spacing: 1px;
+         span{
+           background-color: red;
+           width: 20px;
+           height: 10px;
+         }
+       }
+       padding: 30px 50px;
+       .cards{
+          display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+       grid-gap: 15px;
+       }
+       .card{
+         -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+         background-color: #ffffff;
+         text-align: center;
+        i{
+          padding-top: 10px;
+          font-size: 2rem;
+          color: #17D65E;
+        }
+        h1{
+          color: #17D65E;
+          font-size: 1.8rem;
+          font-weight: 500;
+          span{
+            color: #000000;
+            font-size: 1.5rem;
+          }
+         
+        }
+         p{
+           padding-top: 0;
+            color: red;
+          }
+       }
+    }
   }
  
 }
