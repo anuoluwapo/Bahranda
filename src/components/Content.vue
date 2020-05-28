@@ -62,7 +62,6 @@
     <div id="our-statistics">
       <div class="container">
         <h2>Our Statistics</h2>
-      
         <div class="cards">
           <div class="card">
           <i class="fas fa-users"></i>
@@ -80,10 +79,55 @@
           <p>Investeds</p>
         </div>
         </div>
-        
-         
-        
         </div>  
+    </div>
+    <div id="available-product">
+         <div class="container">
+        <h2>Available Products</h2>
+        <div class="cards">
+          <div class="card">
+          <img src="../assets/Rectangle.png" alt="">
+           <div class="rate"><span>15%</span><i class="far fa-star"></i> <br>Return P.A</div>
+           <h3>Tomatoes</h3>
+           <p>A plant to invest in due to the base complia…..</p>
+          <div class="wrap">
+            <div class="location"><i class="fas fa-map-marker-alt"></i><span>Osun</span></div>
+          <div class="in-stock"><i class="far fa-calendar-check"></i><span>In-Stock</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../assets/Rectangle.png" alt="">
+          <div class="rate"><span>15%</span><i class="far fa-star"></i> <br>Return P.A</div>
+          <h3>Tomatoes</h3>
+          <p>A plant to invest in due to the base complia…..</p>
+          <div class="wrap">
+            <div class="location"><i class="fas fa-map-marker-alt"></i><span>Osun</span></div>
+          <div class="in-stock"><i class="far fa-calendar-check"></i><span>In-Stock</span></div>
+          </div>
+        </div>
+        <div class="card">
+         <img src="../assets/Rectangle.png" alt="">
+         <div class="rate"><span>15%</span><i class="far fa-star"></i> <br>Return P.A</div>
+          <h3>Tomatoes</h3>
+          <p>A plant to invest in due to the base complia…..</p>
+          <div class="wrap">
+            <div class="location"><i class="fas fa-map-marker-alt"></i><span>Osun</span></div>
+          <div class="in-stock"><i class="far fa-calendar-check"></i><span>In-Stock</span></div>
+          </div>
+        </div>
+        <div class="card">
+         <img src="../assets/Rectangle.png" alt="">
+          <div class="rate"><span>15%</span><i class="far fa-star"></i> <br>Return P.A</div>
+          <h3>Tomatoes</h3>
+          <p>A plant to invest in due to the base complia…..</p>
+          <div class="wrap">
+            <div class="location"><i class="fas fa-map-marker-alt"></i><span>Osun</span></div>
+          <div class="in-stock"><i class="far fa-calendar-check"></i><span>In-Stock</span></div>
+          </div>
+          
+        </div>
+        </div>
+        </div>
     </div>
   </div>
 </template>
@@ -218,7 +262,7 @@ export default {}
        
       }
   }
-  #our-statistics{
+  #our-statistics, #available-product{
     margin-top: -13px;
     margin-left: -4.8px;
     margin-right: -4.5px;
@@ -272,6 +316,65 @@ export default {}
           }
        }
     }
+  }
+  #available-product{
+    img{
+      max-width: 100%;
+    }
+    .rate{
+      margin: -12px 0 0 20px;
+      border-radius: 4px;
+      background-color: #17D65E;
+      color: #ffffff;
+      max-width: 80px;
+    }
+    span{
+      font-size: 1rem;
+    }
+    i{
+        color: #ffffff !important;
+        font-size: 1rem !important;
+      }
+      .card{
+        h3, p{
+          text-align: start;
+          padding-left: 20px;
+          line-height: 6px;
+        }
+        p{
+          line-height: 1rem;
+        }
+      }
+      .wrap{
+        div{
+          display: inline-block;
+          padding: 5px 30px 0 20px;
+        }
+        .location{
+          background-color: #EDEDED;
+          padding: 0 30px 0px 10px;
+          border-bottom-left-radius: 10px;
+          i{
+            color: #000000 !important;
+            font-size: 1.5rem !important;
+          }
+          span{
+            padding-left: 32px;
+          }
+        }
+        .in-stock{
+          background-color: #17D65E;
+           padding: 0 30px 0px 10px;
+           border-bottom-right-radius: 10px;
+           i{
+             font-size: 1.5rem !important;
+           }
+          span{
+            color: #ffffff;
+            padding-left: 10px;
+          }
+        }
+      }
   }
  
 }
@@ -329,6 +432,15 @@ export default {}
         }
       }
     }
+     #available-product{
+       .wrap{
+         div{
+           display: block;
+           margin-bottom: 10px;
+          //  margin-top: 10px;
+         }
+       }
+     }
  }
  
 </style>
