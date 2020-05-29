@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- <router-view></router-view> -->
     <NavigationMobile />
     <div class="content" :class="{'open':showNav}">
       <div class="top-bar">
@@ -13,6 +14,7 @@
         <Navigation v-if="!mobileView" />
       </div>
       <Content />
+      <!-- <Footer /> -->
     </div>
   </div>
 </template>
@@ -21,6 +23,7 @@
 import Navigation from "./components/Navigation.vue";
 import NavigationMobile from "./components/NavigationMobile.vue";
 import Content from "./components/Content.vue";
+// import Footer from "./components/Footer.vue";
 
 export default {
   data: () => {
@@ -38,6 +41,7 @@ export default {
     Navigation,
     NavigationMobile,
     Content
+    // Footer
   },
   created() {
     this.handleView();
@@ -97,7 +101,12 @@ body {
   padding: 20px;
   background-color: #fff;
 }
-
+// #footer{
+//   position: absolute;
+//   width: 100%;
+//   bottom: 0;
+//   top: 0;
+// }
 .open {
   transform: translateX(300px);
 }
