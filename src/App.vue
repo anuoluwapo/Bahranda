@@ -11,9 +11,10 @@
             <img src="./assets/logo.png" alt="logo">
           </div>
         </div>
+        
         <Navigation v-if="!mobileView" />
       </div>
-      <Content />
+      <router-view />
       <!-- <Footer /> -->
     </div>
   </div>
@@ -22,7 +23,7 @@
 <script>
 import Navigation from "./components/Navigation.vue";
 import NavigationMobile from "./components/NavigationMobile.vue";
-import Content from "./components/Content.vue";
+// import Content from "./components/Content.vue";
 // import Footer from "./components/Footer.vue";
 
 export default {
@@ -40,7 +41,7 @@ export default {
   components: {
     Navigation,
     NavigationMobile,
-    Content
+    
     // Footer
   },
   created() {

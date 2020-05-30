@@ -8,11 +8,12 @@
       <i class="fas fa-search"></i>
     </div>
     <ul>
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Store</li>
-      <li>Login</li>
-      <li class="sign-up-btn"><button>Sign Up</button></li>
+      <li><router-link to='/' >Home</router-link></li>
+      <li> <router-link to='!#' >About Us</router-link></li>
+       <li><router-link to='!#' >Home</router-link> </li>
+      <li> <router-link to='/login' >Login</router-link></li>
+        <li class="sign-up-btn"> <router-link to='/login' >Sign up</router-link> </li>
+  
     </ul>
   </div>
 </template>

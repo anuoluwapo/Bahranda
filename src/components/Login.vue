@@ -3,8 +3,8 @@
       <div class="form-box">
           <div class="button-box">
               <div id="btn"></div>
-              <button class="toggle-btn" onclick="login()">Login</button>
-              <button class="toggle-btn" onclick="signUp()">Sign Up</button>
+              <button class="toggle-btn" @click="login()">Login</button>
+              <button class="toggle-btn" @click="signUp()">Sign Up</button>
           </div>
           <div class="../assets/social-icons">
             <img src="../assets/fb.png" alt="">
@@ -33,20 +33,33 @@
 export default {
     name: 'Login',
     mounted() {
-      let loginBtn = document.getElementById('login');
-        let signUpBtn = document.getElementById('sign-up');
-        let toggleBtn = document.getElementById('btn');
+     
+        this.signUp();
+        this.login();
+       
+    },
+    data(){
+        return(
+            {
+                 loginBtn : document.getElementById('login'),
+                  signUpBtn  : document.getElementById('sign-up'),
+                 toggleBtn : document.getElementById('btn')
+            }
+        )
+    },
+    methods : {
+          signUp(){
+              alert("test")
+            this.loginBtn.style.left = '-400px';
+            this.signUpBtn.style.left = '50px';
+            this.toggleBtn.style.left = '110px';
+        },
 
-        function signUp(){
-            loginBtn.style.left = '-400px';
-            signUpBtn.style.left = '50px';
-            toggleBtn.style.left = '110px';
-        }
-
-        function login(){
-            loginBtn.style.left = '50px';
-            signUpBtn.style.left = '450px';
-            toggleBtn.style.left = '0px';
+         login(){
+              alert("another")
+            this.loginBtn.style.left = '50px';
+            this.signUpBtn.style.left = '450px';
+            this.toggleBtn.style.left = '0px';
         }
     }
 }
