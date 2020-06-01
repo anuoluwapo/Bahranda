@@ -3,10 +3,12 @@
       <div class="form-box">
           <div class="button-box">
               <div id="btn"></div>
-              <button class="toggle-btn" @click="login()">Login</button>
-              <button class="toggle-btn" @click="signUp()">Sign Up</button>
+              <!-- <button class="toggle-btn" @click="login()">Login</button> -->
+              <button class="toggle-btn" id="login-toggle-btn">Login</button>
+              <button class="toggle-btn" id="sign-up-toggle-btn">Sign Up</button>
+              <!-- <button class="toggle-btn" @click="signUp()">Sign Up</button> -->
           </div>
-          <div class="../assets/social-icons">
+          <div class="social-icons">
             <img src="../assets/fb.png" alt="">
             <img src="../assets/tw.png" alt="">
             <img src="../assets/gp.png" alt="">
@@ -14,7 +16,7 @@
         <form action="" class="input-group" id="login">
             <input type="text" class="input-field" placeholder="User name" required>
             <input type="password" class="input-field" placeholder="Password" required>
-            <input type="checkbox" name="" id="" class="check-box"><span class="check">Remember Password</span>
+            <input type="checkbox" name="" id="" class="check-box"><span class="check" id="remember">Remember Password</span>
             <button type="submit" class="submit-btn">Login</button>
         </form>
 
@@ -22,7 +24,7 @@
             <input type="text" class="input-field" placeholder="User name" required>
             <input type="email" class="input-field" placeholder="Email address" required>
             <input type="password" class="input-field" placeholder="Password" required>
-            <input type="checkbox" name="" id="" class="check-box"><span class="check">By clicking ‘Continue’, you agree to BAHRANDA Terms of Use, <span class="terms">Sponsorship</span> and <span class="terms">Privacy Policy</span></span>
+            <input type="checkbox" name="" id="bahranda-terms" class="check-box"><span class="check">By clicking ‘Continue’, you agree to BAHRANDA Terms of Use, <span class="terms">Sponsorship</span> and <span class="terms">Privacy Policy</span></span>
             <button type="submit" class="submit-btn">Continue</button>
         </form>
       </div>
@@ -33,46 +35,68 @@
 export default {
     name: 'Login',
     mounted() {
-     
-        this.signUp();
-        this.login();
-       
-    },
-    data(){
-        return(
-            {
-                 loginBtn : document.getElementById('login'),
-                  signUpBtn  : document.getElementById('sign-up'),
-                 toggleBtn : document.getElementById('btn')
-            }
-        )
-    },
-    methods : {
-          signUp(){
-              alert("test")
-            this.loginBtn.style.left = '-400px';
-            this.signUpBtn.style.left = '50px';
-            this.toggleBtn.style.left = '110px';
-        },
+        const loginToggleBtn = document.getElementById('login-toggle-btn');
+        const signUpToggleBtn = document.getElementById('sign-up-toggle-btn');
+        const loginForm = document.getElementById('login');           
+        const signUpForm  = document. getElementById('sign-up');
+        const toggleBtn = document.getElementById('btn')
 
-         login(){
-              alert("another")
-            this.loginBtn.style.left = '50px';
-            this.signUpBtn.style.left = '450px';
-            this.toggleBtn.style.left = '0px';
-        }
+        loginToggleBtn.addEventListener('click', () => {
+            loginForm.style.left = '50px';
+            signUpForm.style.left = '450px';
+            toggleBtn.style.left = '0px';
+        });
+        signUpToggleBtn.addEventListener('click', () => {
+            loginForm.style.left = '-400px';
+            signUpForm.style.left = '50px';
+            toggleBtn.style.left = '110px';
+        })
     }
 }
+// export default {
+//     name: 'Login',
+//     mounted() {
+     
+//         this.signUp();
+//         this.login();
+       
+//     },
+//     data(){
+//         return(
+//             {
+//                  loginForm : document.getElementById('login'),
+//                  signUpForm  : document.getElementById('sign-up'),
+//                  toggleBtn : document.getElementById('btn')
+//             }
+//         )
+//     },
+//     methods : {
+//           signUp(){
+//             //   alert("test")
+//             this.loginForm.style.left = '-400px';
+//             this.signUpForm.style.left = '50px';
+//             this.toggleBtn.style.left = '110px';
+//         },
+
+//          login(){
+//             //   alert("another")
+//             this.loginForm.style.left = '50px';
+//             this.signUpForm.style.left = '450px';
+//             this.toggleBtn.style.left = '0px';
+//         }
+//     }
+// }
 </script>
 
 <style lang="scss" scoped>
     #container{
-            height: 100%;
+            // height: 100vh;
             width: 100%;
             background: #dddd;
             background-position: center;
             background-size: cover;
             position: absolute;
+            left: 0;
         }
         .form-box{
             width: 380px;
@@ -154,6 +178,15 @@ export default {
             position: absolute;
             bottom: 65px;
         }
+        #bahranda-terms{
+            margin-top: 18px !important;
+        }
+        span.check{
+                margin-bottom: -2.6px !important;
+            }
+        span#remember{
+            margin-bottom: 1px !important;
+        }
         #login{
             left: 50px;
         }
@@ -161,7 +194,12 @@ export default {
             left: 450px;
         }
         .terms{
+            font-size: 12px;
             color: #17D65E;
         }
-
+        span.check{
+            color: red;
+            // margin-top: 5px !important;
+        }
+      
 </style>

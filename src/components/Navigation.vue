@@ -10,9 +10,9 @@
     <ul>
       <li><router-link to='/' >Home</router-link></li>
       <li> <router-link to='!#' >About Us</router-link></li>
-       <li><router-link to='!#' >Home</router-link> </li>
+       <li><router-link to='!#' >Store</router-link> </li>
       <li> <router-link to='/login' >Login</router-link></li>
-        <li class="sign-up-btn"> <router-link to='/login' >Sign up</router-link> </li>
+      <li class="sign-up-btn"> <router-link to='/login' ><button>Sign up</button></router-link> </li>
   
     </ul>
   </div>
@@ -26,24 +26,31 @@ export default {};
 #navigation {
   display: flex;
   width: 100%;
-  margin: 0 25px 0 -15px;
-  border-bottom: 2px solid black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+  border-bottom: 1px solid #00000022;
   ul {
     display: flex;
     list-style: none;
     margin-right: 30px;
     margin-top: 10px;
     li {
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
       padding: 2px 10px;
-      cursor: pointer;
-
-      &:hover {
-        color: #7ca971;
-      }
+      a:-webkit-any-link {
+        color: #333;
+        font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover{
+      color: #7ca971;
     }
+      }
+
+    }
+    
     .sign-up-btn{
         button{
             padding: 5px 17px;
@@ -65,13 +72,14 @@ export default {};
        img{
            height: 40px;
            width: 120px;
+           margin-top: 10px;
        }
    }
   .search {
     position: relative;
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 5.5px auto;
     input {
       border: none;
       outline: none;

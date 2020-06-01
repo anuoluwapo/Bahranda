@@ -124,7 +124,6 @@
             <div class="location"><i class="fas fa-map-marker-alt"></i><span>Osun</span></div>
           <div class="in-stock"><i class="far fa-calendar-check"></i><span>In-Stock</span></div>
           </div>
-          
         </div>
         </div>
         </div>
@@ -133,22 +132,20 @@
 </template>
 
 <script>
-// import Footer from "components/Footer.vue";
-export default {
-  // components:{
-  //   Footer
-  // }
-}
+
+export default {}
 
 </script>
 
 <style lang="scss" scoped>
 #content{
+  width: 100%;
   background-image: url('../assets/farming.png');
   background-size: cover;
   background-position: center;
   height: 80vh;
-  margin: 0 25px 0 -15px;
+  position: absolute;
+  left: 0;
 
   #brg-content{
     height: 80vh;
@@ -224,7 +221,7 @@ export default {
       }
       .img-2{
         position: absolute;
-        bottom: -290px;
+        bottom: -350px;
         left: 850px;
       }
     }
@@ -234,7 +231,7 @@ export default {
     padding-top: 5rem;
     .img-2{
         position: absolute;
-        top: 1220px;
+        top: 1130px;
       }
       article{
          padding: 0 20px;
